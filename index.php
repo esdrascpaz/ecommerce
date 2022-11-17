@@ -7,9 +7,12 @@ $app = new \Slim\Slim();
 $app->config('debug', true);
 
 $app->get('/', function() {
-    
-	echo "OK";
+	// Acessando a classe Sql na pasta vendor\Hcode
+	$sql = new \Hcode\DB\sql();
 
+	$results = $sql->select('SELECT * FROM tb_users');
+
+	echo json_encode($results);
 });
 
 $app->run();

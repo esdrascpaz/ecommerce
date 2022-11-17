@@ -9,3 +9,7 @@
 Subir pro Github (opcional)
     > git init
     > git remote add origin (git@github.com:esdrascpaz/ecommerce.git)
+    > git push --set-upstream origin main
+copiar a pasta "hcodebr" para a pasta vendor do projeto
+no composer.json > psr-4 > colocar "Hcode\\"
+> composer dump-autoload
