@@ -1,0 +1,11 @@
+* Gerar o banco de dados com o SQL que veio no projeto
+* Alterar a autoria no arquivo composer.json
+* rodar o composer update
+* Adicionar a linha que veio no arquivo hosts do projeto no hosts em "Windows\System32\drivers\etc"
+* Copiar o conteúdo de "httpd-vhosts.conf" para "C:\xampp\apache\conf\extra\httpd-vhosts.conf"
+    * Em "DocumentRoot" e em "Directory", coloque o caminho do projeto (atenção se as barras estão corretas)
+    * Em "ServerName", verifique se o endereço é o mesmo do arquivo hosts (no caso, www.hcodecommerce.com.br)
+    * Reinicie o Apache
+Subir pro Github (opcional)
+    > git init
+    > git remote add origin (git@github.com:esdrascpaz/ecommerce.git)
