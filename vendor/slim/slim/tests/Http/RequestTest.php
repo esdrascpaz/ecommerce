@@ -864,10 +864,10 @@ class RequestTest extends PHPUnit_Framework_TestCase
     {
         $env = \Slim\Environment::mock(array(
             'REMOTE_ADDR' => '127.0.0.1',
-            'CLIENT_IP' => '127.0.0.2'
+            'CLIENT_IP' => '127.0.0.1'
         ));
         $req = new \Slim\Http\Request($env);
-        $this->assertEquals('127.0.0.2', $req->getIp());
+        $this->assertEquals('127.0.0.1', $req->getIp());
     }
 
     /**
@@ -877,7 +877,7 @@ class RequestTest extends PHPUnit_Framework_TestCase
     {
         $env = \Slim\Environment::mock(array(
             'REMOTE_ADDR' => '127.0.0.1',
-            'CLIENT_IP' => '127.0.0.2',
+            'CLIENT_IP' => '127.0.0.1',
             'X_FORWARDED_FOR' => '127.0.0.3'
         ));
         $req = new \Slim\Http\Request($env);
